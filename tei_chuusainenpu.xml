@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0" type="application/xml"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>抽齋年譜</title>
+            <respStmt>
+               <resp>TEI encoding</resp>
+               <name>若手図書館員DH勉強会</name>
+               <persName>鈴置怜子</persName>
+               <persName>西口真梨奈</persName>
+               <persName>福嶋彩乃</persName>
+               <persName>星合耀子</persName>
+               <persName>村田祐菜</persName>
+               <persName>吉村雄太</persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <distributor>若手図書館員DH勉強会</distributor>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <repository>東京大学総合図書館</repository>
+               </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <p>
+               <list>
+                  <item>エンコーディング方針を記述する</item>
+               </list>
+            </p>
+         </editorialDecl>
+      </encodingDesc>
+      <handNotes> 
+            <handNote xml:id="ougai">森鷗外</handNote> 
+         </handNotes> 
+  </teiHeader>
+  <text>
+      <body>
+
+            <pb n="5" facs="https://iiif.dl.itc.u-tokyo.ac.jp/repo/iiif-img/6983/full/200,/0/default.jpg"></pb>
+
+        <p>(<date when="1811-02-14">閏二月<add>十四日</add></date>、妹生れ、即刻死す、
+        法号<persName>曇華水子</persName>)
+        [<persName>抽斎</persName>の兄弟は、此の外
+        に姉<persName>逸子</persName>夭<persName>須磨子</persName>あ
+        り、此の水子と<persName>抽斎</persName>と
+        を併せて都合四人也］
+
+        文化九年壬申
+        八歳九月十一日允成母渋江早太祖母死ニ付忌引、十九日忌御免、日記
+        七月二十八日、父允成、藩主より一粒金丹製法を伝授せらる、
+
+        是れハ、文化十一年の
+        部に入るべきを、誤て
+        此処へ入れたり
+
+        （一粒金丹は津軽家の秘法にして、強壮剤なり、藩中、其の伝授を許さるゝもの僅〻
+        数名に過ぎず、三十粒入一包金一歩。十五粒入半包金二朱にて広く全国へ配布す、
+        保の少時実験する所に拠るに、毎月四五百包づゝ需要者ありたり、）
+
+        文化十年癸酉
+        九歳
+
+        文化十一年甲戌
+        十歳
+
+        前の一粒金丹云々ハ此
+        処に入るべき</p>
+
+         <pb n="7" facs="https://iiif.dl.itc.u-tokyo.ac.jp/repo/iiif-img/6985/full/200,/0/default.jpg" source= "https://iiif.dl.itc.u-tokyo.ac.jp/repo/iiif/60d193c1-d814-42c3-90c0-a5caf5975e1a/canvas/p1"/>
+         <head style="text-indent:3em"><date when="1816-01-29" when-custom="文化十三年丙子">文化十三年丙子</date></head>
+      <head>十二歳</head>
+         <head><date when="1817-02-16" when-custom="文化十四年丁丑">文化十四年丁丑</date></head>
+      <head style="text-indent:3em">十三歳</head>
+            <anchor corresp="2058_19628.xml#07_01"><p xml:id="07-01" style="text-indent:1em">今茲<persName corresp="#森立之">森立之</persName>。<persName>抽斎</persName>の門に入る</p><note corresp="#07-01" place="inline"><milestone unit="wbr">「<persName corresp="#渋江抽斎">先生</persName>が十三歳。<persName corresp="#森立之">弟子</persName>が十一歳なり<lb/>
+            き」とハ後年の一口話なり、</milestone></note></anchor>
+         <head><date when="1818-02-05" when-custom="文政元年戊寅">文政元年戊寅</date></head>
+      <head style="text-indent:3em"><anchor corresp="2058_19628.xml#07_02">十四歳</anchor></head>
+         <head style="text-indent:3em"><date when="1819-01-26" when-custom="文政二年己卯">文政二年己卯</date></head>
+      <head>十五歳</head>
+      <p style="color:red;text-indent:10em">（<date when="1820-01-09" when-custom="文政二年十一月二十四日">十一月二十四日</date>、姉<persName>須磨<lb/>子</persName><milestone unit="wbr">十八歳</milestone>幕臣<persName>飯田四郎左<lb/>衛門良清</persName>に嫁す、）</p>
+        <head style="text-indent:3em"><date when="1820-02-14" when-custom="文政三年庚辰">文政三年庚辰</date></head>
+      <head xml:id="07-02">十六歳</head>
+         <note corresp="#07-02" place="top" style="color:red"><date when="1821-01-19" when-custom="文政三年十二月十六日">十二月十六<lb/>日</date>、<persName corresp="#津軽寧親">藩主</persName><lb/>任<oqqupation>侍従</oqqupation></note>
+         <head style="text-indent:3em"><date when="1821-02-03" when-custom="文政四年">文政四年辛巳</date></head>
+      <head>十七歳</head>
+         <p style="text-indent:1em"><date when="1821-10-26" when-custom="文政四年十月朔日">十月朔日</date>、月並出仕を命せらる、</p>
+         <head style="text-indent:3em"><date when="1822-01-23" when-custom="文政五年壬午">文政五年壬午</date></head>
+      <head xml:id="07-03">十八歳</head>
+         <note corresp="#07-03" place="top" style="color:red"><date when="1822-08-02" when-custom="文政五年六月十六日">六月十六<lb/>日</date>、<persName corresp="#津軽寧親">藩主</persName>大広間<lb/>着坐を命<lb/>せらる</note>
+
+<pb n="13" facs=""/>
+<note style="color:red">れ二月三日死す、</note>
+<head>天保十三年壬寅</head>
+<head>三十八歳</head>
+<note style="color:red">八月三日<PersName>八三郎</PersName>生れ十
+<lb/>十月九日死す、</note>
+<head>天保十四年癸卯</head>
+<head>三十九歳</head>
+<p>六月十五日<add>（<oqqupation>御近習</oqqupation>に）</add>昇級</p>
+<head>弘化元年甲辰</head>
+<head>四十歳</head>
+<note place="top" style="color:red">十二月十六日
+<lb/>日、藩主
+<lb/>叙四品、</note>
+<p>三月十二日<oqqupation>医学館講師</oqqupation>たるべき台命ありた
+<lb/>る旨、<persName corresp="#土井利位">土井大炊頭</persName>より達せらる、</p>
+<p>四月二十九日、自今年始、八朔、五節句、月並御礼
+<lb/>御城江戸城へ罷出べき旨、命ぜらる、</p>
+<p>二月二十一日、妻<persName>徳子</persName>死す、</p><note>享年三十五</note>
+<p>十一月六日<persName>山内忠兵衛</persName><note place="right">神田紺屋町鉄問屋</note>妹<persName>五百子</persName><add>二十九歳</add>を娶る、</p><note><persName>五百
+子</persName>は明治十七年二月十四日死す享年六十九歳</note>
+<add hand="#ougai">（表向比良野氏<ruby><rb>翳</rb><rt>カザシ</rt></ruby>）</add>
+<p>十二月十日、公儀
+より白銀五枚拝領</p>
+<note style="color:red">十二月二十六日、長女<persName>純子</persName>、幕臣<persName>馬場玄玖</persName>に嫁す、
+<lb/>十四歳</note>
+      </body>
+      <back>
+      <listPerson>
+         <person>
+            <persName xml:id="渋江抽斎">
+            <surname>渋江</surname><forename>抽斎</forename>
+            <idno type="VIAF">https://viaf.org/viaf/18576420</idno>
+            </persName>
+         </person>
+         <person xml:id="森立之">
+            <persName>
+            <surname>森</surname><forename>立之</forename>
+            <idno type="VIAF">https://viaf.org/viaf/44186331</idno>
+            </persName>
+         </person>
+         <person xml:id="土井利位">
+            <persName>
+               <surname>土井</surname><forename>利位</forename>
+               <idno type="VIAF">http://viaf.org/viaf/251432551</idno>
+            </persName>
+         </person>
+         <person>
+            <persName xml:id="津軽寧親">
+               <surname>津軽</surname><forename>寧親</forename>
+            </persName>
+         </person>
+      </listPerson>
+      </back>
+      </text>
+</TEI>

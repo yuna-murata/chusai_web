@@ -1,0 +1,64 @@
+/*アイコン改行しない*/
+.no-wrap {
+  display: inline-block;
+}
+
+
+tei-div,tei-head,.manifest {
+  display: block;
+}
+tei-p,tei-title,tei-respstmt {
+  display: block;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+tei-title{
+  font-weight:bold;
+}
+
+/*ハイライト*/
+.highlight {
+  background-color: yellow; /* ハイライトの背景色 */
+}
+
+/*mirador埋め込み*/
+#viewer {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+/*縦書き*/
+#content,#aozora{
+  writing-mode: vertical-rl;
+  max-width:700px ; 
+  max-height: 500px;
+}
+
+tei-back,#header{
+  display: block;
+  border: 1px solid #aaa;
+  padding: 2em;
+}
+
+
+/*リスト
+tei-listPerson {
+  list-style-type: none;
+}
+tei-listPerson > tei-person {
+  display: list-item;
+}*/
+/*
+tei-header {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+tei-titlestmt > tei-title{
+  font-size: 2em;
+      font-weight: bold;
+      margin: 0.67em 0;
+}*/
+
