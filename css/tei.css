@@ -3,6 +3,18 @@
   display: inline-block;
 }
 
+[style="text-indent:3em"]{
+  text-indent: 3em
+}
+
+[style="text-indent:1em"]{
+  text-indent: 1em
+}
+
+[style="text-indent:10em"]{
+  text-indent: 10em !important;
+}
+
 
 tei-div,tei-head,.manifest {
   display: block;
@@ -42,17 +54,26 @@ tei-back,#header{
   padding: 2em;
 }
 
-[style="text-indent:3em"]{
-  text-indent: 3em;
+#iiif_container{
+  display: inline-block;
 }
 
-[style="text-indent:1em"]{
-  text-indent: 1em;
+/*割注
+[unti="wbr"] * {writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  font-size:48px;
+}*/
+#warichu {
+    display: inline-table;
+    /*-webkit-writing-mode: vertical-lr;*/
+    vertical-align: top;
+}
+#warichu-left, #warichu-right {
+ font-size:50%;
+ display: table-row;
+ vertical-align: top;
 }
 
-[style="text-indent:10em"]{
-  text-indent: 10em;
-}
 
 /*リスト
 tei-listPerson {

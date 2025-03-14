@@ -43,67 +43,47 @@
   <text>
       <body>
 
-            <pb n="5" facs="https://iiif.dl.itc.u-tokyo.ac.jp/repo/iiif-img/6983/full/200,/0/default.jpg"></pb>
-
-        <p>(<date when="1811-02-14">閏二月<add>十四日</add></date>、妹生れ、即刻死す、
-        法号<persName>曇華水子</persName>)
-        [<persName>抽斎</persName>の兄弟は、此の外
-        に姉<persName>逸子</persName>夭<persName>須磨子</persName>あ
-        り、此の水子と<persName>抽斎</persName>と
-        を併せて都合四人也］
-
-        文化九年壬申
-        八歳九月十一日允成母渋江早太祖母死ニ付忌引、十九日忌御免、日記
-        七月二十八日、父允成、藩主より一粒金丹製法を伝授せらる、
-
-        是れハ、文化十一年の
-        部に入るべきを、誤て
-        此処へ入れたり
-
-        （一粒金丹は津軽家の秘法にして、強壮剤なり、藩中、其の伝授を許さるゝもの僅〻
-        数名に過ぎず、三十粒入一包金一歩。十五粒入半包金二朱にて広く全国へ配布す、
-        保の少時実験する所に拠るに、毎月四五百包づゝ需要者ありたり、）
-
-        文化十年癸酉
-        九歳
-
-        文化十一年甲戌
-        十歳
-
-        前の一粒金丹云々ハ此
-        処に入るべき</p>
-
          <pb n="7" facs="https://iiif.dl.itc.u-tokyo.ac.jp/repo/iiif-img/6985/full/200,/0/default.jpg" source= "https://iiif.dl.itc.u-tokyo.ac.jp/repo/iiif/60d193c1-d814-42c3-90c0-a5caf5975e1a/canvas/p1"/>
          <head style="text-indent:3em"><date when="1816-01-29" when-custom="文化十三年丙子">文化十三年丙子</date></head>
       <head>十二歳</head>
+      <anchor type="hr"/>
          <head style="text-indent:3em"><date when="1817-02-16" when-custom="文化十四年丁丑">文化十四年丁丑</date></head>
       <head>十三歳</head>
-            <anchor corresp="2058_19628.xml#07_01"><p xml:id="07-01" style="text-indent:1em">今茲<persName corresp="#森立之">森立之</persName>。<persName>抽斎</persName>の門に入る</p><note corresp="#07-01" place="inline"><milestone unit="wbr">「<persName corresp="#渋江抽斎">先生</persName>が十三歳。<persName corresp="#森立之">弟子</persName>が十一歳なり<lb/>
-            き」とハ後年の一口話なり、</milestone></note></anchor>
-         <head><date when="1818-02-05" when-custom="文政元年戊寅">文政元年戊寅</date></head>
-      <head style="text-indent:3em"><anchor corresp="2058_19628.xml#07_02">十四歳</anchor></head>
+            <anchor corresp="2058_19628.xml#07_01"><p xml:id="07-01" style="text-indent:1em">今茲<persName corresp="#森立之">森立之</persName>。<persName>抽斎</persName>の門に入る<milestone unit="wbr">「<persName corresp="#渋江抽斎">先生</persName>が十三歳。<persName corresp="#森立之">弟子</persName>が十一歳なり<lb/>
+            き」とハ後年の一口話なり、</milestone></p></anchor>
+            <anchor type="hr"/>
+         <head style="text-indent:3em"><date when="1818-02-05" when-custom="文政元年戊寅">文政元年戊寅</date></head>
+      <head>十四歳</head>
+      <anchor type="hr"/>
          <head style="text-indent:3em"><date when="1819-01-26" when-custom="文政二年己卯">文政二年己卯</date></head>
       <head>十五歳</head>
-      <p style="color:red;text-indent:10em">（<date when="1820-01-09" when-custom="文政二年十一月二十四日">十一月二十四日</date>、姉<persName>須磨<lb/>子</persName><milestone unit="wbr">十八歳</milestone>幕臣<persName>飯田四郎左<lb/>衛門良清</persName>に嫁す、）</p>
+      <p style="color:red;text-indent:10em">（<date when="1820-01-09" when-custom="文政二年十一月二十四日">十一月二十四日</date>、姉<persName>須磨<lb/>子</persName><milestone unit="wbr">十八<lb/>歳</milestone>幕臣<persName>飯田四郎左<lb/>衛門良清</persName>に嫁す、）</p>
+      <anchor type="hr"/>
         <head style="text-indent:3em"><date when="1820-02-14" when-custom="文政三年庚辰">文政三年庚辰</date></head>
       <head xml:id="07-02">十六歳</head>
+      <anchor type="hr"/>
          <note corresp="#07-02" place="top" style="color:red"><date when="1821-01-19" when-custom="文政三年十二月十六日">十二月十六<lb/>日</date>、<persName corresp="#津軽寧親">藩主</persName><lb/>任<oqqupation>侍従</oqqupation></note>
+         <anchor type="hr"/>
          <head style="text-indent:3em"><date when="1821-02-03" when-custom="文政四年">文政四年辛巳</date></head>
       <head>十七歳</head>
          <p style="text-indent:1em"><date when="1821-10-26" when-custom="文政四年十月朔日">十月朔日</date>、月並出仕を命せらる、</p>
+         <anchor type="hr"/>
          <head style="text-indent:3em"><date when="1822-01-23" when-custom="文政五年壬午">文政五年壬午</date></head>
       <head xml:id="07-03">十八歳</head>
          <note corresp="#07-03" place="top" style="color:red"><date when="1822-08-02" when-custom="文政五年六月十六日">六月十六<lb/>日</date>、<persName corresp="#津軽寧親">藩主</persName>大広間<lb/>着坐を命<lb/>せらる</note>
 
 <pb n="13" facs=""/>
 <note style="color:red;text-indent:10em">れ二月三日死す、</note>
+<anchor type="hr"/>
 <head style="text-indent:3em">天保十三年壬寅</head>
 <head>三十八歳</head>
-<note style="color:red;text-indent:10em">八月三日<PersName>八三郎</PersName>生れ十
+<note style="color:red;text-indent:10em">八月三日<PersName>八三郎</PersName>生れ
 <lb/>十月九日死す、</note>
+<anchor type="hr"/>
 <head style="text-indent:3em">天保十四年癸卯</head>
 <head>三十九歳</head>
 <p>六月十五日<add>（<oqqupation>御近習</oqqupation>に）</add>昇級</p>
+<anchor type="hr"/>
 <head style="text-indent:3em">弘化元年甲辰</head>
 <head>四十歳</head>
 <note place="top" style="color:red">十二月十六日

@@ -61,11 +61,29 @@ const imageUrl = "https://iiif.dl.itc.u-tokyo.ac.jp/images/iiif.png"
 
 //デフォルトで表示するiiifManifestURL
 const defaultManifestUrl = 'https://iiif.dl.itc.u-tokyo.ac.jp/repo/iiif/60d193c1-d814-42c3-90c0-a5caf5975e1a/manifest'
+//const defaultManifestUrl ="iiif.dl.itc.u-tokyo.ac.jp/repo/iiif/60d193c1-d814-42c3-90c0-a5caf5975e1a/canvas/p2"
 
 //各ファイルのpath
 const chusai_path = "./tei_chuusainenpu.xml"
 const shibue_aozora_path = "./2058_19628.xml"
 const iconUrl = "../css/icon_link.png"
+
+//関数定義
+function convertRubyElements(container) {
+            const rubys = container.querySelectorAll('tei-ruby');
+            rubys.forEach(ruby => {
+                var new_ruby = document.createElement("ruby");
+                var rb = document.createElement("rb");
+                var rt = document.createElement("rt");
+
+                rb.textContent = ruby.getElementsByTagName("tei-rb")[0].textContent;
+                rt.textContent = ruby.getElementsByTagName("tei-rt")[0].textContent;
+
+                new_ruby.appendChild(rb);
+                new_ruby.appendChild(rt);
+                ruby.replaceWith(new_ruby);
+            });
+        }
 
 
 //Mirador
@@ -98,15 +116,33 @@ for (let i = 0; i < images.length; i++)
 
 //以下の行にCETEIceanのメソッドを記述
 let CETEIcean = new CETEI();
+let behaviors = {
+    "tei": {
+      "lb": ["<br>"],
+            }};  
+      /*behaviorsの指定*/
+CETEIcean.addBehaviors(behaviors);
 CETEIcean.getHTML5(chusai_path, function(chusai_data)
    {
     const teitext = chusai_data.querySelectorAll('tei-text')[0];
     const text = document.getElementById("content").appendChild(teitext)
+
+    var newHr = document.createElement("hr");
+        var hrs = text.querySelectorAll('anchor[type="hr"]');
+        console.log(hrs)
+        hrs.forEach(hr => {
+
+        hr.replaceWith(newHr);
+        })
     
     //-----anchor--------
     const anchors = text.querySelectorAll('tei-anchor');
     anchors.forEach(function (anchor) {
-    const xmlid = anchor.getAttribute('corresp').split('#')[1];
+
+    const xmlid = anchor.getAttribute('corresp')
+    if (xmlid > 1)
+    { xmlid = xmlid.split('#')[1];
+   
     
     //リンクアイコンを追加
     const icon = document.createElement('img');
@@ -119,7 +155,7 @@ CETEIcean.getHTML5(chusai_path, function(chusai_data)
     // 最初の子要素を取得し、その前にimgタグを挿入
     const firstChild = anchor.firstChild;
     anchor.insertBefore(icon, firstChild);
-
+    }
     //アイコンがクリックされた時の処理
     anchor.addEventListener('click', function() {
       //console.log("クリックしました");
@@ -137,15 +173,19 @@ CETEIcean.getHTML5(chusai_path, function(chusai_data)
         aozora_corresp.classList.add('highlight');
         //スクロール
         aozora_corresp.scrollIntoView({ behavior: 'smooth' });
-    }
-  )});
+        }
+        )});})
 
 
     //-----pb--------
     //pbタグを取得し、iiifアイコンを挿入
     const pbs = text.querySelectorAll('tei-pb');
     pbs.forEach(pb => {
+        //const iiif_container = document.createElement('div');
+        //iiif_container.id = iiif_container;
         const img = document.createElement('img');
+        const img_text = document.createElement("p")
+        img_text.textContent = "ビューワで該当ページの画像を表示する"
         //const manifesturl = pb.getAttribute('facs');
         const manifesturl = "https://dl.ndl.go.jp/api/iiif/2533447/manifest.json" //仮のmanifestURL
         img.src = imageUrl;
@@ -156,82 +196,61 @@ CETEIcean.getHTML5(chusai_path, function(chusai_data)
         img.width = "20";
         img.height = "20"; 
         // pb要素をimg要素に置き換え
+        //iiif_container.appendChild(img);
+        //iiif_container.appendChild(img_text);
+        //console.log(iiif_container)
         pb.replaceWith(img);
+        })
+        //ruby
+        convertRubyElements(text)
 
-        //img.data-manifest = pb.getAttribute('facs');
-        //link.className = "manifest";
-        //img.src= pb.getAttribute('facs')
+
+        //割注
+        const milestones = text.querySelectorAll('tei-milestone');
+        milestones.forEach(milestone => {
+        //console.log(milestone);
+        var newDiv = document.createElement("span");
+
+        newDiv.id ="warichu"
+        var beforeElement = document.createElement("span");
+        beforeElement.id ="warichu-left"
+        var afterElement = document.createElement("span");
+        afterElement.id = "warichu-right"
         
-        //pb.appendChild(img);
-        //const link = document.createElement('a');
-        //link.data-manifest = pb.getAttribute('facs');
-        //link.className = "manifest";
-        //link.appendChild(img);
-        //link.textContent = pb.getAttribute('n')
-        //link.className = "pb-facs";
-        //link.target = "_blank"; // 新しいタブで開く
-
-    })
-    /*
-    const persons = text.querySelectorAll('tei-idno');
-
-    const idnos = text.querySelectorAll('tei-idno');
-    console.log(idnos)
-    idnos.forEach(idno => {
-        // 新しいa要素を作成
-        const link = document.createElement('a');
-        link.href = idno.textContent.trim();
-        link.textContent = "VIAF ID";
-        link.className = "viaf-id";
-        link.target = "_blank"; // 新しいタブで開く
-        // idno要素をリンクで置き換える
-        idno.replaceWith(link);
-      });*/
+        const parts = milestone.innerHTML.split('<tei-lb');
+        if (parts.length > 1) {
+        beforeElement.innerHTML = parts[0];
+        afterElement.innerHTML = parts[1].split('</tei-lb>')[1];
+        console.log('Before <tei-lb>:', beforeElement.innerHTML);
+        console.log('After <tei-lb>:', afterElement.innerHTML);
+        newDiv.appendChild(beforeElement);
+        //newDiv.appendChild(tei_lb);
+        newDiv.appendChild(afterElement);
+        milestone.replaceWith(newDiv);
+        }});
 
 
-      //const teiheader = data.querySelectorAll('tei-teiHeader')[0];
-      //title
-      //const teititle = teiheader.querySelectorAll('tei-title')[0];
-      //console.log(document.getElementById("title"))
-      //const title = document.getElementById("title").appendChild(teititle)
-      //respstmt
-      //const teiresp = teiheader.querySelectorAll('tei-respStmt')[0];
-      //const resp = document.getElementById("resp").appendChild(teiresp)
-      //publicationStmt
-      //const teipub = teiheader.querySelectorAll('tei-publicationStmt')[0];
-      //const pub = document.getElementById("pub").appendChild(teipub)
-      //sourceDesc
-      //const teisource = teiheader.querySelectorAll('tei-sourceDesc')[0];
-      //const source = document.getElementById("source").appendChild(teisource)
 
-     
-
-      })
-      //
+            })
    
-   /*behaviorsの指定*/
-   let behaviors = {
-    "tei": {
-      "lb": ["<br>"],
-    }};
-  CETEIcean.addBehaviors(behaviors);
 
 
 
 
 //青空文庫の渋江抽斎
 let aozoraCETEIcean = new CETEI();
+let aozora_behaviors = {
+  "tei": {
+    "lb": ["<br>"],
+  }};
+aozoraCETEIcean.addBehaviors(aozora_behaviors);
 aozoraCETEIcean.getHTML5(shibue_aozora_path, function(aozora_data)
   {
   const aozora_teitext = aozora_data.querySelectorAll('tei-text')[0];
   const aozora_text = document.getElementById("aozora").appendChild(aozora_teitext)
-
+  convertRubyElements(aozora_teitext)
   /*behaviorsの指定*/
-  let behaviors = {
-  "tei": {
-    "lb": ["<br>"],
-  }};
-aozoraCETEIcean.addBehaviors(behaviors);
-  })})
+  
+  })
 
   </script>
