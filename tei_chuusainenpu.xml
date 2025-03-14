@@ -76,8 +76,8 @@
          <pb n="7" facs="https://iiif.dl.itc.u-tokyo.ac.jp/repo/iiif-img/6985/full/200,/0/default.jpg" source= "https://iiif.dl.itc.u-tokyo.ac.jp/repo/iiif/60d193c1-d814-42c3-90c0-a5caf5975e1a/canvas/p1"/>
          <head style="text-indent:3em"><date when="1816-01-29" when-custom="文化十三年丙子">文化十三年丙子</date></head>
       <head>十二歳</head>
-         <head><date when="1817-02-16" when-custom="文化十四年丁丑">文化十四年丁丑</date></head>
-      <head style="text-indent:3em">十三歳</head>
+         <head style="text-indent:3em"><date when="1817-02-16" when-custom="文化十四年丁丑">文化十四年丁丑</date></head>
+      <head>十三歳</head>
             <anchor corresp="2058_19628.xml#07_01"><p xml:id="07-01" style="text-indent:1em">今茲<persName corresp="#森立之">森立之</persName>。<persName>抽斎</persName>の門に入る</p><note corresp="#07-01" place="inline"><milestone unit="wbr">「<persName corresp="#渋江抽斎">先生</persName>が十三歳。<persName corresp="#森立之">弟子</persName>が十一歳なり<lb/>
             き」とハ後年の一口話なり、</milestone></note></anchor>
          <head><date when="1818-02-05" when-custom="文政元年戊寅">文政元年戊寅</date></head>
@@ -96,15 +96,15 @@
          <note corresp="#07-03" place="top" style="color:red"><date when="1822-08-02" when-custom="文政五年六月十六日">六月十六<lb/>日</date>、<persName corresp="#津軽寧親">藩主</persName>大広間<lb/>着坐を命<lb/>せらる</note>
 
 <pb n="13" facs=""/>
-<note style="color:red">れ二月三日死す、</note>
-<head>天保十三年壬寅</head>
+<note style="color:red;text-indent:10em">れ二月三日死す、</note>
+<head style="text-indent:3em">天保十三年壬寅</head>
 <head>三十八歳</head>
-<note style="color:red">八月三日<PersName>八三郎</PersName>生れ十
+<note style="color:red;text-indent:10em">八月三日<PersName>八三郎</PersName>生れ十
 <lb/>十月九日死す、</note>
-<head>天保十四年癸卯</head>
+<head style="text-indent:3em">天保十四年癸卯</head>
 <head>三十九歳</head>
 <p>六月十五日<add>（<oqqupation>御近習</oqqupation>に）</add>昇級</p>
-<head>弘化元年甲辰</head>
+<head style="text-indent:3em">弘化元年甲辰</head>
 <head>四十歳</head>
 <note place="top" style="color:red">十二月十六日
 <lb/>日、藩主
@@ -119,7 +119,7 @@
 <add hand="#ougai">（表向比良野氏<ruby><rb>翳</rb><rt>カザシ</rt></ruby>）</add>
 <p>十二月十日、公儀
 より白銀五枚拝領</p>
-<note style="color:red">十二月二十六日、長女<persName>純子</persName>、幕臣<persName>馬場玄玖</persName>に嫁す、
+<note style="color:red;text-indent:10em">十二月二十六日、長女<persName>純子</persName>、幕臣<persName>馬場玄玖</persName>に嫁す、
 <lb/>十四歳</note>
       </body>
       <back>
