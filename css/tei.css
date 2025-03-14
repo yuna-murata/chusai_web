@@ -42,6 +42,17 @@ tei-back,#header{
   padding: 2em;
 }
 
+[style="text-indent:3em"]{
+  text-indent: 3em;
+}
+
+[style="text-indent:1em"]{
+  text-indent: 1em;
+}
+
+[style="text-indent:10em"]{
+  text-indent: 10em;
+}
 
 /*リスト
 tei-listPerson {
